@@ -15,6 +15,19 @@
 	<definition name="home" extends="baseLayout">
 		<put-attribute name="contentTitle" value="Welcome Java Blog" />
 		<put-attribute name="body" value="/WEB-INF/jsp/home.jsp" />
+		<put-attribute name="current" value="home" cascade="true"/>
+	</definition>
+	
+	<definition name="search" extends="baseLayout">
+		<put-attribute name="contentTitle" value="Search" />
+		<put-attribute name="body" value="/WEB-INF/jsp/search.jsp" />
+		<put-attribute name="current" value="search" cascade="true"/>
+	</definition>
+	
+	<definition name="result" extends="baseLayout">
+		<put-attribute name="contentTitle" value="Result" />
+		<put-attribute name="body" value="/WEB-INF/jsp/result.jsp" />
+		<put-attribute name="current" value="result" cascade="true"/>
 	</definition>
 
 

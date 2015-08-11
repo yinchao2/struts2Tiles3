@@ -17,9 +17,16 @@
 				class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
 
-		<action name="home" method="getHome"
-			class="com.struts2.tiles3.web.action.HomeAction">
+		<action name="home" method="getHome" class="com.struts2.tiles3.web.action.HomeAction">
 			<result name="success" type="tiles">home</result>
+		</action>
+		
+		<action name="search" method="getSearch" class="com.struts2.tiles3.web.action.SearchAction">
+			<result name="success" type="tiles">search</result>
+		</action>
+		
+		<action name="result" method="getResult" class="com.struts2.tiles3.web.action.ResultAction">
+			<result name="success" type="tiles">result</result>
 		</action>
 
 	</package>
