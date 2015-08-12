@@ -1,8 +1,8 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>
-<s:form action="result" method="post">
+<%@ taglib prefix="s" uri="/struts-tags" %> 
+<s:form name="searchForm">
 	<table>
 		<tr>
-			<td><input type="radio" value="searchByID" name="searchType" checked /> Search By ID</td>
+			<td><input type="radio" value="searchByID" name="searchType" id="searchByID" checked /> Search By ID</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -11,7 +11,7 @@
 		</tr>
 		
 		<tr>
-			<td><input type="radio" value="searchByName" name="searchType" /> Search By Name</td>
+			<td><input type="radio" value="searchByName" name="searchType" id="searchByName" /> Search By Name</td>
 			<td></td>
 		</tr>
 		
@@ -47,11 +47,31 @@
 		<tr>
 			<td></td>
 			<td>
-				<s:submit key="submit" name="Submit" id="searchBtn" />
-<!-- 				<input type="button" value="Submit" name="submit" id="searchBtn" /> -->
+				<s:submit key="submit" name="submit" id="searchBtn" onclick="searchFormSubmit(this)" />
+<!-- 				<input type="button" value="Submit" name="submit" id="searchBtn" onclick="searchFormSubmit(this)"  /> -->
 				<input type="button" value="Reset" name="reset" />
 			</td>
 		</tr>
-		
 	</table>
 </s:form>
+
+<script type="text/javascript">
+
+	function searchFormSubmit(searchForm) {
+		
+		if (document.getElementById('searchByName').checked) {
+			
+			alert(document.getElementById('searchByName').value);
+		  	document.searchForm.action = "<s:url action='resultName' />";
+		}
+		
+		if (document.getElementById('searchByID').checked) {
+			
+			alert(document.getElementById('searchByID').value);
+			document.searchForm.action = "<s:url action='result' />";
+		}
+		
+		document.searchForm.submit(); 
+	}
+
+</script>

@@ -28,6 +28,10 @@
 		<action name="result" method="getResult" class="com.struts2.tiles3.web.action.ResultAction">
 			<result name="success" type="tiles">result</result>
 		</action>
+		
+		<action name="resultName" method="getResultName" class="com.struts2.tiles3.web.action.ResultAction">
+			<result name="success" type="tiles">resultName</result>
+		</action>
 
 	</package>
 </struts>

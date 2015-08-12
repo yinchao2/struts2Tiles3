@@ -29,6 +29,12 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/result.jsp" />
 		<put-attribute name="current" value="result" cascade="true"/>
 	</definition>
+	
+	<definition name="resultName" extends="baseLayout">
+		<put-attribute name="contentTitle" value="Result By Name" />
+		<put-attribute name="body" value="/WEB-INF/jsp/resultName.jsp" />
+		<put-attribute name="current" value="resultname" cascade="true"/>
+	</definition>
 
 
 </tiles-definitions>

@@ -18,9 +18,12 @@ public class ResultAction extends ActionSupport {
 	}
 
 	public String getResult() {
-		
-		System.out.println(searchDC.getID());
-		
+		System.out.println("By ID");
+		return SUCCESS;
+	}
+	
+	public String getResultName() {
+		System.out.println("By Name");
 		return SUCCESS;
 	}
 
