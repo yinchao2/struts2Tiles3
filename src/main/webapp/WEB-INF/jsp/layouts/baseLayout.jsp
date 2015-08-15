@@ -14,6 +14,9 @@
 
 <title><tiles:getAsString name="title"></tiles:getAsString></title>
 
+<!-- jquery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- Bootstrap core CSS -->
 <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,6 +26,9 @@
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+<!-- user define javascript -->
+<script type="text/javascript" src="<s:url value='/js/ajaxFormSubmit.js'></s:url>"></script>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

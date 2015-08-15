@@ -3,7 +3,7 @@ package com.struts2.tiles3.web.action;
 import com.opensymphony.xwork2.ActionSupport;
 import com.struts2.tiles3.web.service.domain.SearchDC;
 
-public class ResultAction extends ActionSupport {
+public class SearchMainAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 
@@ -17,12 +17,14 @@ public class ResultAction extends ActionSupport {
 		this.searchDC = searchDC;
 	}
 
-	public String getResultID() {
+	public String getSearchMain() {
+		
+		if(searchDC.getSearchType().equals("searchByID")) {
+			return "resultID";
+		} else if (searchDC.getSearchType().equals("searchByName")) {
+			return "resultName";
+		}
+		
 		return SUCCESS;
 	}
-	
-	public String getResultName() {
-		return SUCCESS;
-	}
-
 }

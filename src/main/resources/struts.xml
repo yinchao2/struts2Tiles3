@@ -25,7 +25,12 @@
 			<result name="success" type="tiles">search</result>
 		</action>
 		
-		<action name="result" method="getResult" class="com.struts2.tiles3.web.action.ResultAction">
+		<action name="searchMain" method="getSearchMain" class="com.struts2.tiles3.web.action.SearchMainAction">
+			<result name="resultID" type="chain">resultID</result>
+			<result name="resultName" type="chain">resultName</result>
+		</action>
+		
+		<action name="resultID" method="getResultID" class="com.struts2.tiles3.web.action.ResultAction">
 			<result name="success" type="tiles">result</result>
 		</action>
 		

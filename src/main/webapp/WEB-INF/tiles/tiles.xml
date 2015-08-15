@@ -25,7 +25,7 @@
 	</definition>
 	
 	<definition name="result" extends="baseLayout">
-		<put-attribute name="contentTitle" value="Result" />
+		<put-attribute name="contentTitle" value="Result By ID" />
 		<put-attribute name="body" value="/WEB-INF/jsp/result.jsp" />
 		<put-attribute name="current" value="result" cascade="true"/>
 	</definition>

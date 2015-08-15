@@ -1,8 +1,8 @@
 <%@ taglib prefix="s" uri="/struts-tags" %> 
-<s:form name="searchForm">
+<s:form name="searchForm" action="searchMain">
 	<table>
 		<tr>
-			<td><input type="radio" value="searchByID" name="searchType" id="searchByID" checked /> Search By ID</td>
+			<td><input type="radio" value="searchByID" name="searchDC.searchType" id="searchByID" checked /> Search By ID</td>
 			<td></td>
 		</tr>
 		<tr>
@@ -11,7 +11,7 @@
 		</tr>
 		
 		<tr>
-			<td><input type="radio" value="searchByName" name="searchType" id="searchByName" /> Search By Name</td>
+			<td><input type="radio" value="searchByName" name="searchDC.searchType" id="searchByName" /> Search By Name</td>
 			<td></td>
 		</tr>
 		
@@ -33,7 +33,7 @@
 		<tr>
 			<td>Gender: </td>
 			<td>
-				<s:select headerKey="" headerValue=""
+				<s:select headerKey="" headerValue="Select One"
 					list="genderList" 
 					name="searchDC.gender" />
 			</td>
@@ -47,31 +47,9 @@
 		<tr>
 			<td></td>
 			<td>
-				<s:submit key="submit" name="submit" id="searchBtn" onclick="searchFormSubmit(this)" />
-<!-- 				<input type="button" value="Submit" name="submit" id="searchBtn" onclick="searchFormSubmit(this)"  /> -->
-				<input type="button" value="Reset" name="reset" />
+				<s:submit key="submit" name="submit" id="searchBtn" cssClass="btn btn-primary" />
+				<s:reset key="reset" name="reset" cssClass="btn btn-default" />
 			</td>
 		</tr>
 	</table>
 </s:form>
-
-<script type="text/javascript">
-
-	function searchFormSubmit(searchForm) {
-		
-		if (document.getElementById('searchByName').checked) {
-			
-			alert(document.getElementById('searchByName').value);
-		  	document.searchForm.action = "<s:url action='resultName' />";
-		}
-		
-		if (document.getElementById('searchByID').checked) {
-			
-			alert(document.getElementById('searchByID').value);
-			document.searchForm.action = "<s:url action='result' />";
-		}
-		
-		document.searchForm.submit(); 
-	}
-
-</script>

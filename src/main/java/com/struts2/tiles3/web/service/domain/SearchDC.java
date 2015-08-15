@@ -8,6 +8,7 @@ public class SearchDC {
 	private String dateOfBirth;
 	private String gender;
 	private boolean usCitizenOnly;
+	private String searchType;
 
 	public String getID() {
 		return ID;
@@ -55,6 +56,14 @@ public class SearchDC {
 
 	public void setUsCitizenOnly(boolean usCitizenOnly) {
 		this.usCitizenOnly = usCitizenOnly;
+	}
+
+	public String getSearchType() {
+		return searchType;
+	}
+
+	public void setSearchType(String searchType) {
+		this.searchType = searchType;
 	}
 
 }
