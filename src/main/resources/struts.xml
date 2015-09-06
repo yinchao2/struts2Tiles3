@@ -10,11 +10,14 @@
 	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
 	<constant name="struts.custom.i18n.resources"
 		value="/i18n/error-messages, /i18n/webmessages, /i18n/common-messages, /i18n/labels, /env" />
-		
-	<package namespace="/blogs" name="blogs" extends="tiles-default">
+	
+	
+	<package namespace="/blogs" name="blogs" extends="tiles-default, json-default">
 		<result-types>
 			<result-type name="tiles"
 				class="org.apache.struts2.views.tiles.TilesResult" />
+				
+			<result-type name="json" class="com.googlecode.jsonplugin.JSONResult"/>
 		</result-types>
 
 		<action name="home" method="getHome" class="com.struts2.tiles3.web.action.HomeAction">
@@ -37,6 +40,17 @@
 		<action name="resultName" method="getResultName" class="com.struts2.tiles3.web.action.ResultAction">
 			<result name="success" type="tiles">resultName</result>
 		</action>
+		
+<!-- 		<action name="jsonData" method="getJSONData" class="com.struts2.tiles3.web.action.JSONDataAction"> -->
+<!-- 			<result name="success" type="json"></result> -->
+<!-- 		</action> -->
+		
+		<action name="jsonData" class="com.struts2.tiles3.web.action.JSONDataAction">
+       	   	<result type="json" />
+      	</action>
+<!-- 		<action name="jsonData" class="com.struts2.tiles3.web.action.JSONDataAction">  -->
+<!-- 			<result type="json"><param name="root">jsonData</param></result> -->
+<!-- 		</action>  -->
 
 	</package>
 </struts>

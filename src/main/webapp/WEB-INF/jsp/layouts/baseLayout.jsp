@@ -20,6 +20,9 @@
 <!-- Bootstrap core CSS -->
 <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- custom css style sheet -->
+<link href="../css/style.css" rel="stylesheet">
+
 <!-- Custom styles for this template -->
 <link href="http://getbootstrap.com/examples/offcanvas/offcanvas.css" rel="stylesheet">
 
